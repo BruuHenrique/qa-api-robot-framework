@@ -1,0 +1,11 @@
+.venv/
+venv/
+__pycache__/
+reports/
+output.xml
+log.html
+report.html
+.env
+.DS_Store
+*.log
+node_modules/
