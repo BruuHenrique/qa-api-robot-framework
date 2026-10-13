@@ -1,31 +1,39 @@
-# API Test Automation with Robot Framework
+# Automação de Testes de API com Robot Framework
 
-QA portfolio project demonstrating automated REST API testing with **Robot Framework** and **RequestsLibrary**.
+Projeto de portfólio focado em **automação de testes de API REST** utilizando **Robot Framework** e **RequestsLibrary**, com organização de keywords reutilizáveis e execução contínua no GitHub Actions.
 
-## What this project demonstrates
+## 🎯 Objetivo
 
-- API test automation with Robot Framework
-- Reusable keywords and separation of test data/resources
-- Positive and negative scenarios
-- HTTP status, payload and contract validation
-- Data-driven request parameters
-- CI execution with GitHub Actions
-- Test report generation
+Demonstrar conhecimentos de QA aplicados à automação de APIs, com separação de responsabilidades, reutilização de componentes, cenários positivos e negativos e integração com CI/CD.
 
-## Public API used
+## 🧪 O que este projeto demonstra
 
-The test suite runs against **JSONPlaceholder**, a public fake REST API created for examples and testing. No credentials, private customer data or corporate endpoints are required.
+- Automação de APIs com Robot Framework
+- Uso de RequestsLibrary
+- Keywords reutilizáveis
+- Separação entre dados, recursos e casos de teste
+- Cenários positivos e negativos
+- Validação de status HTTP
+- Validação de estrutura e conteúdo da resposta
+- Execução automática com GitHub Actions
+- Geração de relatórios do Robot Framework
 
-## Test scenarios
+## 🌐 API utilizada
 
-| ID | Scenario | Expected result |
+A suíte utiliza a **JSONPlaceholder**, uma API pública destinada a exemplos e testes.
+
+Este projeto não utiliza credenciais privadas, dados reais de clientes ou endpoints corporativos.
+
+## ✅ Cenários automatizados
+
+| ID | Cenário | Resultado esperado |
 | --- | --- | --- |
-| CT01 | Retrieve an existing post | HTTP 200 and expected response contract |
-| CT02 | Filter posts by user | HTTP 200 and all returned posts belong to the requested user |
-| CT03 | Create a post | HTTP 201 and submitted data returned |
-| CT04 | Retrieve a non-existing post | HTTP 404 |
+| CT01 | Consultar um post existente | HTTP 200 + validação do contrato |
+| CT02 | Filtrar posts por usuário | HTTP 200 + validação dos itens retornados |
+| CT03 | Criar um post | HTTP 201 + validação dos dados enviados |
+| CT04 | Consultar um post inexistente | HTTP 404 |
 
-## Project structure
+## 📁 Estrutura
 
 ```text
 .
@@ -42,7 +50,7 @@ The test suite runs against **JSONPlaceholder**, a public fake REST API created 
 └── README.md
 ```
 
-## Setup
+## ⚙️ Preparação do ambiente
 
 ```bash
 python -m venv .venv
@@ -62,22 +70,24 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-## Run the tests
+## ▶️ Executando os testes
 
 ```bash
 robot -d reports testcases/
 ```
 
-Robot Framework will generate `report.html`, `log.html` and `output.xml` inside `reports/`.
+O Robot Framework gera `report.html`, `log.html` e `output.xml` dentro da pasta `reports/`.
 
-## CI/CD
+## 🔄 CI/CD
 
-The GitHub Actions workflow executes the suite on every push and pull request to `main` and uploads the Robot Framework reports as workflow artifacts.
+A suíte é executada automaticamente pelo GitHub Actions em alterações enviadas para a branch `main` e em pull requests. Os relatórios de execução ficam disponíveis como artefatos do workflow.
 
-## QA skills highlighted
+## 🛠️ Tecnologias e competências
 
-`Robot Framework` · `RequestsLibrary` · `API Testing` · `REST` · `Test Design` · `Reusable Keywords` · `GitHub Actions` · `CI/CD`
+`Robot Framework` · `RequestsLibrary` · `API Testing` · `REST API` · `Test Design` · `Reusable Keywords` · `GitHub Actions` · `CI/CD`
 
-## Portfolio note
+---
 
-This repository is a sanitized portfolio project based on QA automation concepts. All examples use public test data and a public API.
+### English summary
+
+QA portfolio project demonstrating REST API automation with Robot Framework and RequestsLibrary, reusable keywords, positive/negative scenarios and continuous testing with GitHub Actions.
